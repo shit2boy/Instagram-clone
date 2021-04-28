@@ -5,8 +5,8 @@ import * as ROUTES from "../constants/routes";
 import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
-  const firebase = useContext(FirebaseContext);
-  const user = useContext(UserContext);
+  const { firebase } = useContext(FirebaseContext);
+  const { user } = useContext(UserContext);
   const history = useHistory();
   console.log("dffd", firebase);
   const onKeyDownSignout = (event) => {

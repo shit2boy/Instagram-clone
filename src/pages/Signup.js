@@ -122,14 +122,14 @@ const SignUp = () => {
                 isInvalid && `opacity-50`
               }`}
             >
-              Log in
+              Sign Up
             </button>
           </form>
           <div className="flex justify-center items-center flex-col w-full bg-white my-3 p-4 border border-gray-primary">
             <p className="text-sm ">
               Don't have an account?{" "}
-              <Link to={ROUTES.SIGN_IN} className="font-bold text-blue-medium">
-                Sign Up
+              <Link to={ROUTES.LOGIN} className="font-bold text-blue-medium">
+                Sign in
               </Link>
             </p>
           </div>
