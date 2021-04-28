@@ -3,7 +3,7 @@ import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import firebaseContext from "../context/firebase";
 import * as ROUTES from "../constants/routes";
-import doesUsernameExist from "../services/Firebase";
+import { doesUsernameExist } from "../services/Firebase";
 
 const SignUp = () => {
   const history = useHistory();

@@ -85,7 +85,16 @@ const Header = () => {
                 </div>
               </>
             ) : (
-              <>smsm</>
+              <>
+                <Link to to={ROUTES.LOGIN}>
+                  <button
+                    type="button"
+                    className="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8"
+                  >
+                    Login
+                  </button>
+                </Link>
+              </>
             )}
           </div>
         </div>
