@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import UserContext from "../context/User";
-import { getUserObjByUserId } from "../services/Firebase";
+import { getUserByUserId } from "../services/Firebase";
 
 const useUserHook = () => {
   const [activeUser, setActiveUser] = useState({});
@@ -8,7 +8,7 @@ const useUserHook = () => {
 
   useEffect(() => {
     const getUserObjByUserId = async () => {
-      const response = await getUserObjByUserId(user.uid);
+      const [response] = await getUserByUserId(user.uid);
       setActiveUser(response);
     };
     if (user?.uid) {
