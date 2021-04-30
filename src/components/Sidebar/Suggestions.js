@@ -5,17 +5,20 @@ import { getSuggestedProfiles } from "../../services/Firebase";
 import SuggestedProfile from "./SuggestedProfile";
 
 const Suggestions = ({ userId, following, loggedInUserId }) => {
-  const [profiles, setProfile] = useState(null);
+  const [profiles, setProfiles] = useState(null);
 
   useEffect(() => {
     const suggestedProfile = async () => {
       const response = await getSuggestedProfiles(userId, following);
-      setProfile(response);
+      setProfiles(response);
       console.log("res", response);
-      console.log(profiles);
+      //   console.log(profiles);
     };
-    suggestedProfile();
-  }, [userId]);
+    if (userId) {
+      suggestedProfile();
+    }
+    // suggestedProfile();
+  }, [userId, following]);
 
   return !profiles ? (
     // <Skeleton count={2} height={150} className="mt-5" />
@@ -29,7 +32,7 @@ const Suggestions = ({ userId, following, loggedInUserId }) => {
         {profiles.map((profile) => (
           <SuggestedProfile
             key={profile.docId}
-            spDocId={profile.docId}
+            profileDocId={profile.docId}
             username={profile.username}
             profileId={profile.userId}
             userId={userId}

@@ -64,7 +64,7 @@ const SignUp = () => {
         <img src="/Images/iphone-with-profile.jpg" alt="akeem" />
       </div>
       <div className="flex flex-col w-2/5 ml-5">
-        <div classname="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4">
+        <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4">
           <h1 className="flex justify-center w-full">
             <img
               src="/Images/logo.png"

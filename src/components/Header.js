@@ -78,7 +78,8 @@ const Header = () => {
                   <Link to={`/p/${user.displayName}`}>
                     <img
                       className="rounded-full h-8 w-8 flex"
-                      src={`/images/avatars/${user.displayName}.jpg`}
+                      src={`/images/avatars/default.png`}
+                      // src={`/images/avatars/${user.displayName}.jpg`}
                       alt={`${user.displayName} profile`}
                     />
                   </Link>
@@ -86,7 +87,7 @@ const Header = () => {
               </>
             ) : (
               <>
-                <Link to to={ROUTES.LOGIN}>
+                <Link to={ROUTES.LOGIN}>
                   <button
                     type="button"
                     className="bg-blue-medium font-bold text-sm rounded text-white w-20 h-8"
