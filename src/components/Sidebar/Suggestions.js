@@ -11,7 +11,7 @@ const Suggestions = ({ userId, following, loggedInUserId }) => {
     const suggestedProfile = async () => {
       const response = await getSuggestedProfiles(userId, following);
       setProfiles(response);
-      console.log("res", response);
+      // console.log("res", response);
       //   console.log(profiles);
     };
     if (userId) {
@@ -36,6 +36,7 @@ const Suggestions = ({ userId, following, loggedInUserId }) => {
             username={profile.username}
             profileId={profile.userId}
             userId={userId}
+            loggedInUserId={loggedInUserId}
           />
         ))}
       </div>

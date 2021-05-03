@@ -6,6 +6,8 @@ import * as ROUTES from "./constants/routes";
 import UserContext from "./context/User";
 import useAuthListener from "./Hooks/use-auth-listener";
 
+import ProtectedRoute from "./helpers/ProtectedRoute";
+
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -21,7 +23,9 @@ const App = () => {
             {/* <Route path={ROUTES.LOGIN} exact component={Login} /> */}
             <Route path={ROUTES.LOGIN} exact component={Login} />
             <Route path={ROUTES.SIGN_IN} exact component={Signup} />
-            <Route path={ROUTES.DASHBOARD} exact component={Dashboard} />
+            <ProtectedRoute user={user} path={ROUTES.DASHBOARD} exact>
+              <Dashboard />
+            </ProtectedRoute>
             <Route component={NotFound} />
           </Switch>
         </Suspense>

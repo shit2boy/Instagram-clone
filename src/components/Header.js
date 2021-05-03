@@ -8,7 +8,7 @@ const Header = () => {
   const { firebase } = useContext(FirebaseContext);
   const { user } = useContext(UserContext);
   const history = useHistory();
-  console.log("dffd", firebase);
+  // console.log("dffd", firebase);
   const onKeyDownSignout = (event) => {
     if (event.key === "Enter") {
       firebase.auth().signOut();

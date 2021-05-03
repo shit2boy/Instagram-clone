@@ -13,6 +13,7 @@ const SuggestedProfile = ({
   profileId,
   loggedInUserId,
 }) => {
+  // console.log(profileId);
   const [followed, setFollowed] = useState(false);
 
   const handleFollowUser = async () => {
@@ -28,7 +29,7 @@ const SuggestedProfile = ({
       <div className="flex items-center justify-between">
         <img
           className="rounded-full w-8 flex mr-3"
-          //   src={`/images/avatars/${username}.png`}
+          // src={`/images/avatars/${username}.jpg`}
           src={`/images/users/avi/akeem.jpg`}
           alt="suggested-profile"
         />
