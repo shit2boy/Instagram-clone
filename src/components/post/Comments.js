@@ -11,9 +11,9 @@ const Comments = ({ docId, posted, allComments, commentInput }) => {
   return (
     <>
       <div className="p-4 pt-1 pb-4">
-        {comments >= 3 && (
+        {comments >= 2 && (
           <p className="tex-sm text-gray-base mb-1 cursor-pointer">
-            View all {comments.length} comments
+            View all comments
           </p>
         )}
 
