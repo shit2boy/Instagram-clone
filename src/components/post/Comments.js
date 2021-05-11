@@ -41,7 +41,7 @@ const Comments = ({ docId, posted, allComments, commentInput }) => {
 
 Comments.propTypes = {
   docId: PropTypes.string.isRequired,
-  comments: PropTypes.array.isRequired,
+  comments: PropTypes.array,
   posted: PropTypes.number.isRequired,
   commentInput: PropTypes.object.isRequired,
 };
